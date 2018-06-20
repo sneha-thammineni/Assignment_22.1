@@ -1,0 +1,27 @@
+
+	<main>
+		<h2>New Products!</h2>
+
+
+		{{#each product}}
+
+			<div class="product-container">
+
+				<a href="/{{_id}}"><img class="main-img" src="{{img}}"/></a>
+
+				<h3><a href="/{{id}}">{{name}}</a></h3>
+
+				<p>${{price}} each </p>
+
+			</div>
+
+
+		{{/each}}
+
+
+		<a href="/new">Create a Product</a>
+	</main>
+
+
+</body>
+</html>

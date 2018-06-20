@@ -1,0 +1,38 @@
+<main>
+
+		<h2>You are viewing: {{product.name}}</h2>
+
+		<a href="/">Return to Home Page</a>
+
+		<div class="product-container-show">
+			<h2 id="product-name">{{name}}</h2>
+			<img src="{{product.img}}"/><br>
+			<h3>Description:</h3>
+				<p> {{product.description}}</p><br>
+			<h3>Price:</h3>
+				<p id="cost">${{product.price}} each</p><br>
+
+				<h3 id="quantity">
+
+
+		 				{{product.qty}} remaining
+
+
+				</h3>
+
+				<br>
+
+				<a href="/{{product._id}}/edit">Edit this Item</a>
+
+				<form action="/{{product._id}}?_method=PUT" method="POST">
+							<input type="hidden" name="qty" value="{{product.qty}}"><br>
+						  <input type="submit" value="BUY NOW">
+				</form>
+			</div>
+
+			<form action='/{{product._id}}?_method=DELETE' method="POST">
+				<button>Delete Item</button>
+			</form>
+	</main>
+</body>
+</html>
